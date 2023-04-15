@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/AliLtRP/voltage-measuring-iot.git/static/css/main.afd9c9a5.css",
-    "main.js": "/AliLtRP/voltage-measuring-iot.git/static/js/main.fc18a6a4.js",
+    "main.js": "/AliLtRP/voltage-measuring-iot.git/static/js/main.811c2e29.js",
     "static/js/787.1a51471b.chunk.js": "/AliLtRP/voltage-measuring-iot.git/static/js/787.1a51471b.chunk.js",
     "static/media/logo.svg": "/AliLtRP/voltage-measuring-iot.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/AliLtRP/voltage-measuring-iot.git/index.html",
     "main.afd9c9a5.css.map": "/AliLtRP/voltage-measuring-iot.git/static/css/main.afd9c9a5.css.map",
-    "main.fc18a6a4.js.map": "/AliLtRP/voltage-measuring-iot.git/static/js/main.fc18a6a4.js.map",
+    "main.811c2e29.js.map": "/AliLtRP/voltage-measuring-iot.git/static/js/main.811c2e29.js.map",
     "787.1a51471b.chunk.js.map": "/AliLtRP/voltage-measuring-iot.git/static/js/787.1a51471b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.afd9c9a5.css",
-    "static/js/main.fc18a6a4.js"
+    "static/js/main.811c2e29.js"
   ]
 }
