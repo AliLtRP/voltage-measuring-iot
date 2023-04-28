@@ -2,7 +2,7 @@
 #include <FirebaseESP32.h>
 
 #define WIFI_SSID "shaheen"
-#define WIFI_PASSWORD "****"
+#define WIFI_PASSWORD "ALI123456y"
 
 
 /* 2. Define the API Key */
@@ -11,13 +11,15 @@
 /* 3. Define the RTDB URL */
 #define DATABASE_URL "https://voltageread-22aa9-default-rtdb.firebaseio.com/"  //<databaseName>.firebaseio.com or <databaseName>.<region>.firebasedatabase.app
 
-#define dd 2
+// pin to read from
+#define analogDataRead 34
 
 FirebaseData firebaseData;
 
 // FirebaseJson json;
 
-int num;
+float num;
+float out;
 
 void setup() {
 
@@ -27,7 +29,8 @@ void setup() {
   // connect to wifi
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
-  pinMode(dd, INPUT);
+  // set the pin as an input
+  pinMode(analogDataRead, INPUT);
 
   // connect to firebase
   Firebase.begin(DATABASE_URL, API_KEY);
@@ -37,12 +40,16 @@ void setup() {
 
 void loop() {
 
-  for (int i = 100; i > 0; i++) {
+  // re-assign num var to hold the data  
 
-    // default data for checking
-    // json.set("/data", i);
-    // Firebase.updateNode(firebaseData, "/number", json);
-    Firebase.pushString(firebaseData, "/number", i);
-    delay(500);
-  }
+  num = analogRead(analogDataRead);
+
+  out = num * (3.3 / 4095.0);
+
+  // print output
+  Serial.println(out);
+  // push num to node "/voltage" 
+  Firebase.pushString(firebaseData, "/voltage", out);
+  delay(200);
+
 }
